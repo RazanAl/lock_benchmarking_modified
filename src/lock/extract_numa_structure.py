@@ -17,13 +17,13 @@ def numa_structure():
     outputString = ""
     coresNodeList = []
     while not_ready:
-        line = lscpu_pipe.readline()
+        line = lscpu_pipe.readline().decode('utf-8')
         if line:
-            matchObject = re.search("NUMA node\d CPU\(s\):(.*)", line, re.M)
+            matchObject = re.search(r"NUMA node\d CPU\(s\):(.*)", line, re.M)
             if matchObject:
                 number_of_numa_nodes = number_of_numa_nodes + 1
                 cpusString = matchObject.group(1).strip()
-                rangeMatchObject = re.search("(\d+)-(\d+)", cpusString, re.M)
+                rangeMatchObject = re.search(r"(\d+)-(\d+)", cpusString, re.M)
                 coreListString = ""
                 if rangeMatchObject:
                     start = int(rangeMatchObject.group(1).strip())

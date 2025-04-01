@@ -4,8 +4,8 @@
 #include <limits.h>
 #include <stdio.h>
 #include "agnostic_rdx_lock.h"
-#include "utils/smp_utils.h"
-#include "utils/thread_identifier.h"
+#include "../utils/smp_utils.h"
+#include "../utils/thread_identifier.h"
 
 #define READ_PATIENCE_LIMIT 130000
  

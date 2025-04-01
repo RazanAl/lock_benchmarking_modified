@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 #include "multi_writers_queue.h"
-#include "utils/smp_utils.h"
+#include "../utils/smp_utils.h"
 
 MWQueue * mwqueue_create(){
     MWQueue * queue = malloc(sizeof(MWQueue));

@@ -4,8 +4,8 @@
 #include <limits.h>
 #include <stdio.h>
 #include "all_equal_rdx_lock.h"
-#include "utils/smp_utils.h"
-#include "utils/thread_identifier.h"
+#include "../utils/smp_utils.h"
+#include "../utils/thread_identifier.h"
 
 #define NUMBER_OF_READ_SPIN_ATTEMPTS 10000
 

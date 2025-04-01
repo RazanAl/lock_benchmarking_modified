@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 #include "opti_multi_writers_queue.h"
-#include "utils/smp_utils.h"
+#include "../utils/smp_utils.h"
 
 
 OptiMWQueue * omwqueue_create(){
